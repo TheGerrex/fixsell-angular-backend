@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { PrintersModule } from './printers/printers.module';
 
 @Module({
   imports: [
@@ -41,7 +42,11 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     inject: [ConfigService],
 
     
-  })
+  }),
+    
+    
+    
+    PrintersModule
 ],
   controllers: [AppController],
   providers: [AppService],
